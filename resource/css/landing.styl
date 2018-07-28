@@ -29,7 +29,7 @@ button{
 }
 
 .focus-form{
-  width: 24%;
+  width: 100%;
   float: right;
   padding: 10px;
   background: rgba(255, 255, 255, 0.91);
@@ -63,8 +63,8 @@ button{
 .production{
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
-  width: 45%;
-  margin-left: 31%;
+  width: 100%;
+  margin-left: 0;
   margin-top: 8%;
   padding: 2px;
   border-radius: 8px;
@@ -105,14 +105,18 @@ button{
   margin-right: 10px;
 }
 
-@media (min-width: 320px) and (max-width: 1455px){
+@media only screen and (min-width: 600px){
   .focus-form{
-    width: 40%;
+    width: 60%;
   }
-}
+};
 
-@media screen and (max-width: 319px){
+@media only screen and (min-width: 1455px){
   .focus-form{
-    width: 79%;
+    width: 24%;
+  }
+  .production{
+    width: 45%;
+    margin-left: 31%;
   }
 }
