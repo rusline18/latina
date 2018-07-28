@@ -4,10 +4,7 @@
     <list default="true" id="f09d4550-55fa-46b4-9dee-9d853c4568c1" name="Default" comment="Удаление не нужнг8о">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource/css/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/resource/css/landing.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/css/landing.styl" beforeDir="false" afterPath="$PROJECT_DIR$/resource/css/landing.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/js/materialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/resource/js/materialize.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -36,12 +33,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+              <first_editor relative-caret-position="150">
+                <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -77,11 +74,11 @@
         <option value="$PROJECT_DIR$/js/materialize.js" />
         <option value="$PROJECT_DIR$/css/landing.styl" />
         <option value="$PROJECT_DIR$/resource/css/index.styl" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/resource/js/aos.js" />
         <option value="$PROJECT_DIR$/resource/js/materialize.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/resource/css/landing.styl" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -214,11 +211,25 @@
       <option name="project" value="LOCAL" />
       <updated>1532766833754</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Стилистика лендинга">
+      <created>1532780433251</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532780433251</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Подключение AOS библеотеки">
+      <created>1532780456824</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532780456824</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34556000" />
+    <option name="totallyTimeSpent" value="35408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
@@ -267,7 +278,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Инициализация проекта" />
     <MESSAGE value="Удаление не нужнг8о" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удаление не нужнг8о" />
+    <MESSAGE value="Стилистика лендинга" />
+    <MESSAGE value="Подключение AOS библеотеки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Подключение AOS библеотеки" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resource/css/landing.styl">
@@ -564,16 +577,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resource/js/aos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -607,6 +610,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="81" column="41" lean-forward="true" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
