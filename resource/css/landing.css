@@ -1,0 +1,68 @@
+body,
+html {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+}
+.focus-form {
+  width: 24%;
+  float: right;
+  padding: 10px;
+  background: rgba(255,255,255,0.91);
+  margin-top: 6%;
+  margin-right: 13%;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.focus-form h4:first-child {
+  font-weight: bold;
+}
+.focus-form p {
+  font-size: 21px;
+}
+.focus-form p span {
+  font-weight: bold;
+}
+.focus-form button {
+  border: 1px solid #ffb74d;
+  color: #000;
+  background: none;
+  padding: 11px;
+  padding-left: 13%;
+  padding-right: 13%;
+  border-radius: 8px;
+  font-weight: 100;
+  -moz-transition: background color 0.6s ease;
+  -o-transition: background color 0.6s ease;
+  -webkit-transition: background 0.6s ease, colot 0.3s ease-out;
+}
+.focus-form button:hover {
+  background: #ffb74d;
+  color: #fff;
+}
+.advantage {
+  padding-top: 2px;
+}
+.advantage i {
+  margin-left: 34%;
+  color: #ffd180;
+}
+.advantage .advantage-text {
+  text-align: center;
+}
+.production {
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+  width: 45%;
+  margin-left: 31%;
+  margin-top: 8%;
+  padding: 2px;
+  border-radius: 8px;
+}
+.container h2 {
+  text-align: center;
+}
+.parallax-container {
+  height: 670px;
+}
