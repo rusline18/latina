@@ -2,6 +2,31 @@ body, html{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 18px;
 }
+.nav_header{
+  padding-right: 25px;
+  .nav_header-phone{
+    font-size: 27px;
+    font-weight: bold;
+  }
+}
+
+button{
+  border: 1px solid #ffb74d;
+  color: #000;
+  background: none;
+  padding: 11px;
+  padding-left: 13%;
+  padding-right: 13%;
+  border-radius: 8px;
+  font-weight: 100;
+  -moz-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  -webkit-transition: background .6s ease, colot .3s ease-out;
+  &:hover{
+    background: #ffb74d;
+    color: #ffffff;
+  }
+}
 
 .focus-form{
   width: 24%;
@@ -21,23 +46,6 @@ body, html{
     font-size: 21px;
     span{
       font-weight: bold;
-    }
-  }
-  button{
-    border: 1px solid #ffb74d;
-    color: #000;
-    background: none;
-    padding: 11px;
-    padding-left: 13%;
-    padding-right: 13%;
-    border-radius: 8px;
-    font-weight: 100;
-    -moz-transition: all .6s ease;
-    -o-transition: all .6s ease;
-    -webkit-transition: background .6s ease, colot .3s ease-out;
-    &:hover{
-      background: #ffb74d;
-      color: #ffffff;
     }
   }
 }
@@ -68,6 +76,43 @@ body, html{
   }
 }
 
+.latina_production{
+  margin-top: -19px;
+}
+
+.price{
+  h2{
+    text-align: left;
+  }
+  .price_subtitle{
+    font-weight: bold;
+  }
+}
+
+.direction{
+  padding-bottom: 37px;
+  .register_lesson{
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
 .parallax-container{
   height: 670px;
+}
+
+.social_network{
+  margin-right: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 1455px){
+  .focus-form{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 319px){
+  .focus-form{
+    width: 79%;
+  }
 }
