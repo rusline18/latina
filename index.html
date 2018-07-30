@@ -36,19 +36,19 @@
                 <h4>Новый набор на бачата</h4>
                 <h4>9 июля в 20:00</h4>
                 <p>Занятие по <span>понедельникам</span> и <span>средам</span> в 20:00</p>
-                <form action="#">
+                <form action="#" id="focus_form_recording">
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
-                            <input type="text" id="name">
+                            <input type="text" id="name" name="name">
                             <label for="name">Имя</label>
                         </div>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">phone</i>
-                            <input type="text" id="phone">
+                            <input type="text" id="phone" name="phone">
                             <label for="phone">Телефон</label>
                         </div>
-                        <button>Записаться</button>
+                        <button type="submit">Записаться</button>
                     </div>
                 </form>
             </div>
@@ -237,5 +237,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="resource/js/materialize.js"></script>
+    <script src="resource/js/form.js"></script>
 </body>
 </html>
