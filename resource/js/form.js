@@ -30,7 +30,6 @@ $(document).ready(function(){
                         $('.focus-form').animatedForm({title: res.message});
                     }, 500);
                 }
-                console.log(res);
             })
             .fail(err => console.error(err))
     });
@@ -66,8 +65,12 @@ $(document).ready(function(){
                         $('.modal-content').animatedForm({title: res.message});
                     }, 500);
                 }
-                console.log(res);
             })
-            .fail(err => $('.modal-content').animatedForm({title: 'Произошла ошибка! Попробуйте позже', type: 'error'}))
+            .fail(() => {
+                $('.modal-content').animatedForm({
+                    title: 'Произошла ошибка! Попробуйте позже',
+                    type: 'error'
+                });
+            })
     })
 });
