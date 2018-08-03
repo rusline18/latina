@@ -1,9 +1,10 @@
 <?php
 $name = htmlspecialchars($_POST['name']);
 $phone = htmlspecialchars($_POST['phone']);
+$direction = htmlspecialchars($_POST['direction']);
 
 $validate = new Validate($name, $phone);
-echo json_encode($validate->getValidate(), JSON_UNESCAPED_UNICODE);
+echo json_encode($validate->getValidate($direction), JSON_UNESCAPED_UNICODE);
 exit();
 
 class Validate
@@ -18,7 +19,7 @@ class Validate
         $this->name = $name;
     }
 
-    public function getValidate()
+    public function getValidate(string $direction)
     {
         if (!$this->name && !$this->phone){
             return $this->getMessage(true, 'Заполните имя и телефон');
