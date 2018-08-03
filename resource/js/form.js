@@ -27,7 +27,7 @@ $(document).ready(function(){
                     }, 500);
                 } else {
                     setTimeout(function () {
-                        $('.focus_form-message').animatedForm();
+                        $('.focus-form').animatedForm({title: res.message});
                         // $('.focus_form-button').html(`Записаться`);
                     }, 500);
                 }
