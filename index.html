@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Latina</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -153,7 +154,7 @@
                                 <p>Бачата — очень романтичный латиноамериканский танец, который можно танцевать великолепно, используя шаги и движения, не требующие специальной подготовки и усиленных тренировок. Сложные и красивые повороты помогут придать танцу страсть и очарование.</p>
                             </div>
                             <div class="card-footer register_lesson">
-                                <button>Записаться</button>
+                                <button data-target="modal" class="modal-trigger" data-direction="Bachata">Записаться</button>
                             </div>
                         </div>
                     </div>
@@ -168,7 +169,7 @@
                                 <p>Merengue (Мере́нге) - один из самых популярных карибских танцев! Взрыв положительных эмоций, энергичная музыка, беззаботное веселье и полная свобода собраны в этом зажигательном стиле, который запросто танцуют по всей Южной Америке и за ее пределами!</p>
                             </div>
                             <div class="card-footer register_lesson">
-                                <button>Записаться</button>
+                                <button data-target="modal" class="modal-trigger" data-direction="Merengue">Записаться</button>
                             </div>
                         </div>
                     </div>
@@ -183,7 +184,7 @@
                                 <p>Salsa Choke (или Salsa Urbana). Жанр и танец очень популярны в колумбийских ночных клубах. Танцуется сольно, в паре и в толпе, так как ведение отсутствует. Базовый шаг описывается как "похожий на бачату, но по 2 шага в стороны и в 2 раза быстрее".</p>
                             </div>
                             <div class="card-footer register_lesson">
-                                <button>Записаться</button>
+                                <button data-target="modal" class="modal-trigger" data-direction="Salsa Choke">Записаться</button>
                             </div>
                         </div>
                     </div>
@@ -198,7 +199,7 @@
                                 <p>Приемчики тропического Леди-стайла завораживают! Сочные движения и утонченные манера шагов - то, чем должна обладать каждая девушка и каждая женщина! </p>
                             </div>
                             <div class="card-footer register_lesson">
-                                <button>Записаться</button>
+                                <button data-target="modal" class="modal-trigger" data-direction="Lady Style">Записаться</button>
                             </div>
                         </div>
                     </div>
@@ -213,7 +214,7 @@
                                 <p>Стретчинг – это упражнения на растяжку и гибкость. Растяжка мышц ног — один из основных элементов данной дисциплины. Кроме возможности сесть на шпагат, исполнив свою детскую мечту, занятия стретчингом прекрасно тренируют мышцы шеи, спины, рук и всей верхней части тела.</p>
                             </div>
                             <div class="card-footer  register_lesson">
-                                <button>Записаться</button>
+                                <button data-target="modal" class="modal-trigger" data-direction="Streng">Записаться</button>
                             </div>
                         </div>
                     </div>
@@ -234,6 +235,34 @@
             </div>
         </div>
     </footer>
+
+    <!--Начало Модального окна-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h4 class="modal-title">Записатсья на занятие</h4>
+            <div class="modal_form">
+                <form action="" id="modal-form">
+                    <div class="modal_form-message"></div>
+                    <div class="row">
+                        <input type="hidden" name="direction" class="modal_form-direcion">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input type="text" id="nameModal" name="name">
+                            <label for="nameModal">Имя</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">phone</i>
+                            <input type="text" id="phoneModal" name="phone">
+                            <label for="phoneModal">Телефон</label>
+                        </div>
+                        <button type="submit" class="modal_form-button">Записаться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Конец Модального окна-->
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
