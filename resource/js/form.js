@@ -28,11 +28,46 @@ $(document).ready(function(){
                 } else {
                     setTimeout(function () {
                         $('.focus-form').animatedForm({title: res.message});
-                        // $('.focus_form-button').html(`Записаться`);
                     }, 500);
                 }
                 console.log(res);
             })
             .fail(err => console.error(err))
+    });
+
+    $('#modal-form').submit(function (e) {
+        e.preventDefault();
+        $.post({
+            url: window.location.origin+'/form.php',
+            data: $(this).serialize(),
+            beforeSend: function () {
+                $('.modal_form-button').html(`<div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-default-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>`);
+            }
+        })
+            .done(request => {
+                let res = JSON.parse(request);
+                if (res.error === true){
+                    setTimeout(function () {
+                        $('.modal_form-message').html(`<span class="error">${res.message}</span>`);
+                        $('.modal_form-button').html(`Записаться`);
+                    }, 500);
+                } else {
+                    setTimeout(function () {
+                        $('.modal-content').animatedForm({title: res.message});
+                    }, 500);
+                }
+                console.log(res);
+            })
+            .fail(err => $('.modal-content').animatedForm({title: 'Произошла ошибка! Попробуйте позже', type: 'error'}))
     })
 });
