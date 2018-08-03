@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="resource/css/landing.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="js/AnimateFrom/css/animate-form.css">
 </head>
 <body>
     <header>
@@ -37,6 +36,7 @@
                 <h4>9 июля в 20:00</h4>
                 <p>Занятие по <span>понедельникам</span> и <span>средам</span> в 20:00</p>
                 <form action="#" id="focus_form_recording">
+                    <div class="focus_form-message"></div>
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
@@ -48,7 +48,7 @@
                             <input type="text" id="phone" name="phone">
                             <label for="phone">Телефон</label>
                         </div>
-                        <button type="submit">Записаться</button>
+                        <button type="submit" class="focus_form-button">Записаться</button>
                     </div>
                 </form>
             </div>
@@ -234,9 +234,11 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="resource/js/materialize.js"></script>
+    <script src="js/AnimateFrom/animate-form.js"></script>
     <script src="resource/js/form.js"></script>
 </body>
 </html>
