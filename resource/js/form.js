@@ -68,6 +68,6 @@ $(document).ready(function(){
                 }
                 console.log(res);
             })
-            .fail(err => $('.modal-content').animatedForm({title: 'Произошла ошибка! Попробуйте позже', type: 'error'}))
+            .fail(() => $('.modal-content').animatedForm({title: 'Произошла ошибка! Попробуйте позже', type: 'error'}))
     })
 });
