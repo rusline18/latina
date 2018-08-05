@@ -4,6 +4,9 @@ body, html{
 }
 .nav_header{
   padding-right: 25px;
+  img{
+    width: 82%;
+  }
   .nav_header-phone{
     font-size: 27px;
     font-weight: bold;
@@ -38,7 +41,6 @@ button{
   padding: 10px;
   background: rgba(255, 255, 255, 0.91);
   margin-top: 6%;
-  margin-right: 13%;
   text-align: center;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -125,6 +127,12 @@ button{
 @media only screen and (min-width: 600px){
   .focus-form{
     width: 60%;
+    margin-right: 13%;
+  }
+  .nav_header{
+    img{
+      width: 100%;
+    }
   }
 }
 
@@ -135,5 +143,11 @@ button{
   .production{
     width: 45%;
     margin-left: 31%;
+  }
+}
+
+@media only screen and (min-width: 2556px) {
+  .focus-form{
+    margin-top: 2%;
   }
 }
