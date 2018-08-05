@@ -6,6 +6,10 @@ $validate = new Validate($name, $phone);
 echo json_encode($validate->getValidate(), JSON_UNESCAPED_UNICODE);
 exit();
 
+
+/**
+ * Class Validate
+ */
 class Validate
 {
     private $name;
@@ -18,6 +22,10 @@ class Validate
         $this->name = $name;
     }
 
+    /**
+     * Проверка на заполнение телефона или email
+     * @return array
+     */
     public function getValidate()
     {
         if (!$this->name && !$this->phone){
@@ -31,6 +39,12 @@ class Validate
         }
     }
 
+    /**
+     * Выводит сообщение о результате
+     * @param bool $error
+     * @param string $message
+     * @return array
+     */
     public function getMessage(bool $error, string $message)
     {
         return $this->result = [
