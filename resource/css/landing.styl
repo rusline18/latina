@@ -2,24 +2,12 @@ body, html{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 18px;
 }
-.nav_header{
-  padding-right: 25px;
-  img{
-    width: 82%;
-  }
-  .nav_header-phone{
-    font-size: 27px;
-    font-weight: bold;
-  }
-}
 
-button{
+button(){
   border: 1px solid #ffb74d;
   color: #000;
   background: none;
-  padding: 11px;
-  padding-left: 13%;
-  padding-right: 13%;
+  padding: 11px 13%;
   border-radius: 8px;
   font-weight: 100;
   -moz-transition: all .6s ease;
@@ -33,6 +21,21 @@ button{
     background: #ffb74d;
     color: #ffffff;
   }
+}
+
+.nav_header{
+  padding-right: 25px;
+  img{
+    width: 82%;
+  }
+  .nav_header-phone{
+    font-size: 27px;
+    font-weight: bold;
+  }
+}
+
+button{
+  button();
 }
 
 .focus-form{
@@ -100,6 +103,9 @@ button{
   .register_lesson{
     text-align: center;
     padding-bottom: 20px;
+  }
+  button{
+    button();
   }
 }
 
