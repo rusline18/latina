@@ -4,6 +4,8 @@ $(document).ready(function(){
     $('.scrollspy').scrollSpy();
     $('.modal').modal();
 
+    $('.phone').mask('+7(999)999-99-99');
+
     AOS.init({
         once: true,
         duration: 400,

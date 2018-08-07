@@ -2,22 +2,12 @@ body, html{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 18px;
 }
-//Навигация
-.nav_header{
-  padding-right: 25px;
-  .nav_header-phone{
-    font-size: 27px;
-    font-weight: bold;
-  }
-}
 
-button{
+button(){
   border: 1px solid #ffb74d;
   color: #000;
   background: none;
-  padding: 11px;
-  padding-left: 13%;
-  padding-right: 13%;
+  padding: 11px 13%;
   border-radius: 8px;
   font-weight: 100;
   -moz-transition: all .6s ease;
@@ -33,13 +23,27 @@ button{
   }
 }
 
+.nav_header{
+  padding-right: 25px;
+  img{
+    width: 82%;
+  }
+  .nav_header-phone{
+    font-size: 27px;
+    font-weight: bold;
+  }
+}
+
+button{
+  button();
+}
+
 .focus-form{
-  width: 24%;
+  width: 100%;
   float: right;
   padding: 10px;
   background: rgba(255, 255, 255, 0.91);
   margin-top: 6%;
-  margin-right: 13%;
   text-align: center;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -68,8 +72,8 @@ button{
 .production{
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
-  width: 45%;
-  margin-left: 31%;
+  width: 100%;
+  margin-left: 0;
   margin-top: 8%;
   padding: 2px;
   border-radius: 8px;
@@ -100,6 +104,9 @@ button{
     text-align: center;
     padding-bottom: 20px;
   }
+  button{
+    button();
+  }
 }
 
 .parallax-container{
@@ -112,7 +119,7 @@ button{
 
 //Модальнгое окно
 .modal-content .sa{
-  padding-left 45%;
+  padding-left: 45%;
 }
 
 .modal-title{
@@ -123,14 +130,30 @@ button{
   margin-left: 32%;
 }
 
-@media (min-width: 320px) and (max-width: 1455px){
+@media only screen and (min-width: 600px){
   .focus-form{
-    width: 40%;
+    width: 60%;
+    margin-right: 13%;
+  }
+  .nav_header{
+    img{
+      width: 100%;
+    }
   }
 }
 
-@media screen and (max-width: 319px){
+@media only screen and (min-width: 1455px){
   .focus-form{
-    width: 79%;
+    width: 24%;
+  }
+  .production{
+    width: 45%;
+    margin-left: 31%;
+  }
+}
+
+@media only screen and (min-width: 2556px) {
+  .focus-form{
+    margin-top: 2%;
   }
 }
