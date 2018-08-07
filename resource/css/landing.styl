@@ -119,7 +119,7 @@ button{
 
 //Модальнгое окно
 .modal-content .sa{
-  padding-left: 45%;
+  padding-left: 40%;
 }
 
 .modal-title{
@@ -127,10 +127,18 @@ button{
 }
 
 .modal_form-button{
-  margin-left: 32%;
+  margin-left: 0%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 600px){
+  .modal_form-button{
+    margin-left: 24%;
+    width: 48%;
+  }
+  .modal-content .sa{
+    padding-left: 45%;
+  }
   .focus-form{
     width: 60%;
     margin-right: 13%;
@@ -139,6 +147,13 @@ button{
     img{
       width: 100%;
     }
+  }
+}
+
+@media only screen and (min-width: 715px){
+  .modal_form-button {
+    margin-left: 32%;
+    width: 39%;
   }
 }
 
