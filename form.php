@@ -1,10 +1,15 @@
 <?php
+
+use Landing\Mail;
+
+require 'send.php';
 $name = htmlspecialchars($_POST['name']);
 $phone = htmlspecialchars($_POST['phone']);
+$direction = (int)$_POST['direction_id'];
+$type = (int)$_POST['type'];
 
 $validate = new Validate($name, $phone);
-echo json_encode($validate->getValidate($direction), JSON_UNESCAPED_UNICODE);
-exit();
+echo json_encode($validate->getValidate(), JSON_UNESCAPED_UNICODE);
 
 
 /**
@@ -14,6 +19,8 @@ class Validate
 {
     private $name;
     private $phone;
+    private $direction;
+    private $type;
     public $result = [];
 
     public function __construct(string $name, string $phone)
@@ -24,6 +31,7 @@ class Validate
 
     /**
      * Проверка на заполнение телефона или email
+     * Если все верно то сохраняет в бд и отправляют по email лид
      * @return array
      */
     public function getValidate()
@@ -44,6 +52,9 @@ class Validate
             }
             $dbconn = require 'connection.php';
             pg_insert($dbconn, 'lid', $_POST);
+            $message = [$_POST];
+            $mail = new Mail();
+            $mail->send('absaruslan9@yandex.ru', 'absaruslan90@gmail.com','Лид с лендинга Latina', $message);
             return $this->getMessage(false, 'Сообщение отправлено');
         }
     }
