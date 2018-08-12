@@ -36,7 +36,7 @@ class Mail{
         $type = (int)$message['type'];
         $mail = new PHPMailer(true);
         try {
-            $mail->SMTPDebug = 2;
+            $mail->SMTPDebug = 0;
             $mail->isSMTP();
             $mail->Host = $this->host;
             $mail->SMTPAuth = $this->auth;
@@ -54,11 +54,7 @@ class Mail{
             $message['type'] = self::type()[$type];
             $body = 'Имя: '.$message['name'].' Телефон: '.$message['phone'].' Направление: '.$message['direction_id'].' '.$message['type'];
             $mail->Body = $body;
-            if ($mail->send()){
-                return true;
-            } else {
-                return false;
-            }
+            return $mail->send();
         } catch (Exception $e) {
             return 'Сообщение не отправлено. Ошибка: '.$mail->ErrorInfo;
         }
