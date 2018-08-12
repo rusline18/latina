@@ -5,12 +5,11 @@ use Landing\Mail;
 require 'send.php';
 $name = htmlspecialchars($_POST['name']);
 $phone = htmlspecialchars($_POST['phone']);
-$direction = (int)$_POST['direction_id'];
-$type = (int)$_POST['type'];
+$_POST['created_at'] = time();
 
 $validate = new Validate($name, $phone);
 echo json_encode($validate->getValidate(), JSON_UNESCAPED_UNICODE);
-
+exit();
 
 /**
  * Class Validate
@@ -19,8 +18,6 @@ class Validate
 {
     private $name;
     private $phone;
-    private $direction;
-    private $type;
     public $result = [];
 
     public function __construct(string $name, string $phone)
