@@ -76,12 +76,15 @@
                     <a href="#" class="brand-logo center">
                         <img src="{{ asset('image/landing/logo.png') }}" alt="Логотип">
                     </a>
-                    <ul id="nav-mobile" class="left hide-on-med-and-down">
-                        <li><a href="#advantages">Нащи преимущества</a></li>
-                        <li><a href="#price">Наши цены</a></li>
-                        <li><a href="#direction">Направление</a></li>
-                    </ul>
-                    <a href="/login" class="right" title="Войти в личный кабинет"><i class="material-icons">exit_to_app</i></a>
+                    {{--<ul id="nav-mobile" class="left hide-on-med-and-down">--}}
+                        {{--<li><a href="#advantages">Нащи преимущества</a></li>--}}
+                        {{--<li><a href="#price">Наши цены</a></li>--}}
+                        {{--<li><a href="#direction">Направление</a></li>--}}
+                    {{--</ul>--}}
+                    <a href="/login" class="left" title="Войти в личный кабинет">
+                        Авторизация
+                        {{--<i class="material-icons">exit_to_app</i>--}}
+                    </a>
                     <span class="right nav_header-phone">239-07-30</span>
                 </div>
             </nav>
@@ -96,6 +99,7 @@
                     <h4>9 июля в 20:00</h4>
                     <p>Занятие по <span>понедельникам</span> и <span>средам</span> в 20:00</p>
                     <form action="#" id="focus_form_recording">
+                        {{ csrf_field() }}
                         <div class="focus_form-message"></div>
                         <input type="hidden" name="direction_id" value="1">
                         <input type="hidden" name="type" value="1">
@@ -303,6 +307,7 @@
                 <h4 class="modal-title">Записатсья на занятие</h4>
                 <div class="modal_form">
                     <form action="" id="modal-form">
+                        {{ csrf_field() }}
                         <div class="modal_form-message"></div>
                         <div class="row">
                             <input type="hidden" name="direction_id" class="modal_form-direcion">
