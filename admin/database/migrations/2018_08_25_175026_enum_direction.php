@@ -16,8 +16,7 @@ class EnumDirection extends Migration
         Schema::create('direction', function (Blueprint $table) {
            $table->increments('id');
            $table->string('name');
-           $table->timestamp('created_at');
-           $table->timestamp('updated_at');
+           $table->timestamps();
         });
     }
 
