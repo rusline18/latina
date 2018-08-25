@@ -19,7 +19,10 @@ class CreateLidTable extends Migration
             $table->string('phone');
             $table->integer('direction_id');
             $table->integer('type');
-            $table->timestamps();
+            $table->integer('active')->default(1);
+            $table->integer('created_at');
+            $table->integer('updated_at');
+            $table->integer('deleted_at')->nullable();
 
             $table->foreign('direction_id')->references('id')->on('direction');
         });
