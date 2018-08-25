@@ -1,0 +1,174 @@
+body, html{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+}
+
+button(){
+  border: 1px solid #ffb74d;
+  color: #000;
+  background: none;
+  padding: 11px 13%;
+  border-radius: 8px;
+  font-weight: 100;
+  -moz-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  -webkit-transition: background .6s ease, colot .3s ease-out;
+  &:hover{
+    background: #ffb74d;
+    color: #ffffff;
+  }
+  &:focus{
+    background: #ffb74d;
+    color: #ffffff;
+  }
+}
+
+.nav_header{
+  padding-right: 25px;
+  img{
+    width: 82%;
+  }
+  .nav_header-phone{
+    font-size: 27px;
+    font-weight: bold;
+  }
+}
+
+button{
+  button();
+}
+
+.focus-form{
+  width: 100%;
+  float: right;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.91);
+  margin-top: 6%;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  h4:first-child{
+    font-weight: bold;
+  }
+  p{
+    font-size: 21px;
+    span{
+      font-weight: bold;
+    }
+  }
+}
+
+.advantage{
+  padding-top: 2px;
+  i{
+    margin-left: 34%;
+    color: #ffd180;
+  }
+  .advantage-text{
+    text-align: center;
+  }
+}
+.production{
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  margin-left: 0;
+  margin-top: 8%;
+  padding: 2px;
+  border-radius: 8px;
+}
+
+.container{
+  h2{
+    text-align: center;
+  }
+}
+
+.latina_production{
+  margin-top: -19px;
+}
+
+.price{
+  h2{
+    text-align: left;
+  }
+  .price_subtitle{
+    font-weight: bold;
+  }
+}
+
+.direction{
+  padding-bottom: 37px;
+  .register_lesson{
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  button{
+    button();
+  }
+}
+
+.parallax-container{
+  height: 670px;
+}
+
+.social_network{
+  margin-right: 10px;
+}
+
+//Модальнгое окно
+.modal-content .sa{
+  padding-left: 40%;
+}
+
+.modal-title{
+  text-align: center;
+}
+
+.modal_form-button{
+  margin-left: 0%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px){
+  .modal_form-button{
+    margin-left: 24%;
+    width: 48%;
+  }
+  .modal-content .sa{
+    padding-left: 45%;
+  }
+  .focus-form{
+    width: 60%;
+    margin-right: 13%;
+  }
+  .nav_header{
+    img{
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 715px){
+  .modal_form-button {
+    margin-left: 32%;
+    width: 39%;
+  }
+}
+
+@media only screen and (min-width: 1455px){
+  .focus-form{
+    width: 24%;
+  }
+  .production{
+    width: 45%;
+    margin-left: 31%;
+  }
+}
+
+@media only screen and (min-width: 2556px) {
+  .focus-form{
+    margin-top: 2%;
+  }
+}

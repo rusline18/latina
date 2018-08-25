@@ -2,94 +2,341 @@
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <title>Laravel</title>
+        <title>Latina</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="{{ asset('js/AnimateForm/css/animate-form.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
+        {{--<style>--}}
+            {{--html, body {--}}
+                {{--background-color: #fff;--}}
+                {{--color: #636b6f;--}}
+                {{--font-family: 'Raleway', sans-serif;--}}
+                {{--font-weight: 100;--}}
+                {{--height: 100vh;--}}
+                {{--margin: 0;--}}
+            {{--}--}}
 
-            .full-height {
-                height: 100vh;
-            }
+            {{--.full-height {--}}
+                {{--height: 100vh;--}}
+            {{--}--}}
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+            {{--.flex-center {--}}
+                {{--align-items: center;--}}
+                {{--display: flex;--}}
+                {{--justify-content: center;--}}
+            {{--}--}}
 
-            .position-ref {
-                position: relative;
-            }
+            {{--.position-ref {--}}
+                {{--position: relative;--}}
+            {{--}--}}
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+            {{--.top-right {--}}
+                {{--position: absolute;--}}
+                {{--right: 10px;--}}
+                {{--top: 18px;--}}
+            {{--}--}}
 
-            .content {
-                text-align: center;
-            }
+            {{--.content {--}}
+                {{--text-align: center;--}}
+            {{--}--}}
 
-            .title {
-                font-size: 84px;
-            }
+            {{--.title {--}}
+                {{--font-size: 84px;--}}
+            {{--}--}}
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+            {{--.links > a {--}}
+                {{--color: #636b6f;--}}
+                {{--padding: 0 25px;--}}
+                {{--font-size: 12px;--}}
+                {{--font-weight: 600;--}}
+                {{--letter-spacing: .1rem;--}}
+                {{--text-decoration: none;--}}
+                {{--text-transform: uppercase;--}}
+            {{--}--}}
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+            {{--.m-b-md {--}}
+                {{--margin-bottom: 30px;--}}
+            {{--}--}}
+        {{--</style>--}}
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+        <header>
+            <nav>
+                <div class="nav-wrapper orange lighten-1 nav_header">
+                    <a href="#" class="brand-logo center">
+                        <img src="{{ asset('image/landing/logo.png') }}" alt="Логотип">
+                    </a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="#advantages">Нащи преимущества</a></li>
+                        <li><a href="#price">Наши цены</a></li>
+                        <li><a href="#direction">Направление</a></li>
+                    </ul>
+                    <a href="/login" class="right" title="Войти в личный кабинет"><i class="material-icons">exit_to_app</i></a>
+                    <span class="right nav_header-phone">239-07-30</span>
                 </div>
-            @endif
+            </nav>
+        </header>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+        <!--Начало Фокус-->
+        <section class="focus">
+            <div class="parallax-container">
+                <div class="parallax"><img src="{{ asset('image/landing/baumana.jpg') }}"></div>
+                <div class="focus-form z-depth-3" data-aos="zoom-in">
+                    <h4>Новый набор на бачата</h4>
+                    <h4>9 июля в 20:00</h4>
+                    <p>Занятие по <span>понедельникам</span> и <span>средам</span> в 20:00</p>
+                    <form action="#" id="focus_form_recording">
+                        <div class="focus_form-message"></div>
+                        <input type="hidden" name="direction_id" value="1">
+                        <input type="hidden" name="type" value="1">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input type="text" id="name" name="name">
+                                <label for="name">Имя</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">phone</i>
+                                <input type="text" id="phone" name="phone" class="phone">
+                                <label for="phone">Телефон</label>
+                            </div>
+                            <button type="submit" class="focus_form-button">Записаться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--Конец Фокуса-->
+
+        <!--Начало Наши преимущество-->
+        <section class="advantage orange lighten-5">
+            <div class="container" data-aos="fade-right" data-aos-offset="200">
+                <h2 id="advantages" class="scrollspy">
+                    <span>Наши преимущества</span>
+                </h2>
+                <div class="row">
+                    <div class="col s12 m4 l3" data-aos="zoom-in">
+                        <i class="material-icons large advantage-icon_people">group</i>
+                        <p class="advantage-text">Cможете завести массу знакомств.</p>
+                    </div>
+                    <div class="col s12 m4 l3" data-aos="zoom-in">
+                        <i class="material-icons large advantage-icon_location">room</i>
+                        <p class="advantage-text">Ты сможешь попробовать свои силы во многих мероприятиях от наших организаторов.</p>
+                    </div>
+                    <div class="col s12 m4 l3" data-aos="zoom-in">
+                        <i class="material-icons large">access_time</i>
+                        <p class="advantage-text">Занятия проходят в режиме НОН-СТОП - час непрерывных движений и максимум отдачи!</p>
+                    </div>
+                    <div class="col s12 m4 l3" data-aos="zoom-in">
+                        <i class="material-icons large">camera_alt</i>
+                        <p class="advantage-text">Мы создали проект Latina Production, на котором регулярно проводим съемки танцевально-музыкальных клипов и рекламных видео-роликов.</p>
+                    </div>
+                    <div class="col s12 m4 l3" data-aos="zoom-in">
+                        <i class="material-icons large">location_city</i>
+                        <p class="advantage-text">Мы находимся в самом центре города Казани в шаговой доступности от станции метро.</p>
+                    </div>
+                    <div class="col s12 m4 l3" data-aos="zoom-in">
+                        <i class="material-icons large">school</i>
+                        <p class="advantage-text">Вас обучают профессиональные хореографы, в уютном и комфортабельном танцевальном зале.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Конец наших преимущество-->
+
+
+        <!--Начало Latina Production-->
+        <section class="latina_production">
+            <div class="parallax-container">
+                <div class="parallax"><img src="{{ asset('image/landing/latinaProduction.jpg') }}"></div>
+                <div class="production container" data-aos="fade-right">
+                    <h2>Latina Production</h2>
+                    <p>Приходилось ли вам мечтать о том, чтобы друзья и знакомые узнали вас на одном из видео, которое пересматривают тысячи людей?</p>
+                    <p>Тогда предлагаем принять участие в эксклюзивных видеосъемках и фотосессиях, ведь это - уникальная возможность стать популярным здесь и сейчас.</p>
+                    <p>Мы также предлагаем массу возможностей участия в рекламных роликах и стильных летних видеоклипах абсолютно разным людям независимо от предыдущего опыта в съемках! </p>
+                </div>
+            </div>
+        </section>
+        <!--Конец Latina Production-->
+
+        <!--Начало Наши цены-->
+        <section class="price scrollspy" id="price">
+            <div class="container" data-aos="fade-right">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <h2>Наши цены</h2>
+                        <div>Разовое занятие 350 руб 1 день</div>
+                        <div>Индивидуальные занятие 1000 руб 1 день</div>
+                        <div class="price_subtitle">Абонименты</div>
+                        <div>Абонимент на 8 занятий 1800 руб 1 месяц</div>
+                        <div>Абонемент на 12 занятий 2400 руб 2 месяца</div>
+                        <div>Абонемент на 16 занятий 2800 руб 2 месяца</div>
+                        <div class="price_subtitle">Карты</div>
+                        <div>Пурпурная VIP карта 3200 руб 1 месяц</div>
+                        <div>Золотая VIP карта 8900 руб 3 месяца</div>
+                    </div>
+
+                    <div class="col s12 m6">
+                        <h2>Акции</h2>
+                        <div>Абонемент на 8 занятий для пары (м+ж) 3200 руб (вместо 3400 руб) 1 месяц</div>
+                        <div>Абонемент на 8 индивидуальных занятий 6800 руб (вместо 8000 руб) 45 дней</div>
+                    </div>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div>Также имеются свадебный танец (8 занятий + подборка и обработка музыки + 2 часа сверхурочной самостоятельной практики в зале) 5600 руб 1 месяц</div>
+            </div>
+        </section>
+        <!--Конец Наши цены-->
+
+        <!--Начало Направление-->
+        <section id="direction" class="direction orange lighten-5 scrollspy">
+            <div class="container" data-aos="fade-right">
+                <div class="row">
+                    <h2>Направление</h2>
+                    <div class="row">
+                        <div class="col s12 m6 l5 xl4" data-aos="zoom-in">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="{{ asset('image/landing/bachata.webp') }}" alt="Бачата">
+                                    <span class="card-title">Бачата</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="chip">Парное</div>
+                                    <p>Бачата — очень романтичный латиноамериканский танец, который можно танцевать великолепно, используя шаги и движения, не требующие специальной подготовки и усиленных тренировок. Сложные и красивые повороты помогут придать танцу страсть и очарование.</p>
+                                </div>
+                                <div class="card-footer register_lesson">
+                                    <button data-target="modal" class="modal-trigger" data-direction="1">Записаться</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l5 xl4" data-aos="zoom-in">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="{{ asset('image/landing/merengue.webp') }}" alt="Меренге">
+                                    <span class="card-title">Меренге</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="chip">Парное</div>
+                                    <p>Merengue (Мере́нге) - один из самых популярных карибских танцев! Взрыв положительных эмоций, энергичная музыка, беззаботное веселье и полная свобода собраны в этом зажигательном стиле, который запросто танцуют по всей Южной Америке и за ее пределами!</p>
+                                </div>
+                                <div class="card-footer register_lesson">
+                                    <button data-target="modal" class="modal-trigger" data-direction="3">Записаться</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l5 xl4" data-aos="zoom-in">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="{{ asset('image/landing/salsa_choke.webp') }}" alt="Сальса Чоке">
+                                    <span class="card-title">Сальса Чоке</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="chip">Сольное</div>
+                                    <p>Salsa Choke (или Salsa Urbana). Жанр и танец очень популярны в колумбийских ночных клубах. Танцуется сольно, в паре и в толпе, так как ведение отсутствует. Базовый шаг описывается как "похожий на бачату, но по 2 шага в стороны и в 2 раза быстрее".</p>
+                                </div>
+                                <div class="card-footer register_lesson">
+                                    <button data-target="modal" class="modal-trigger" data-direction="2">Записаться</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l5 xl4" data-aos="zoom-in">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="{{ asset('image/landing/lady_style.webp') }}" alt="Lady Style">
+                                    <span class="card-title">Lady Style</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="chip">Сольное</div>
+                                    <p>Приемчики тропического Леди-стайла завораживают! Сочные движения и утонченные манера шагов - то, чем должна обладать каждая девушка и каждая женщина! </p>
+                                </div>
+                                <div class="card-footer register_lesson">
+                                    <button data-target="modal" class="modal-trigger" data-direction="4">Записаться</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l5 xl4" data-aos="zoom-in">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="{{ asset('image/landing/streng.webp') }}" alt="Стретчинг">
+                                    <span class="card-title">Стретчинг</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="chip">Пластика</div>
+                                    <p>Стретчинг – это упражнения на растяжку и гибкость. Растяжка мышц ног — один из основных элементов данной дисциплины. Кроме возможности сесть на шпагат, исполнив свою детскую мечту, занятия стретчингом прекрасно тренируют мышцы шеи, спины, рук и всей верхней части тела.</p>
+                                </div>
+                                <div class="card-footer  register_lesson">
+                                    <button data-target="modal" class="modal-trigger" data-direction="5">Записаться</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Начало Направление-->
+
+        <footer class="page-footer orange lighten-1">
+            <div class="footer-copyright">
+                <div class="container">
+                    <!--Соц сети-->
+                    <a href="https://vk.com/latinaschool" class="social_network"><span><img src="{{ asset('image/landing/vk.png') }}" alt="VK"></span></a>
+                    <a href="https://www.instagram.com/olga_de_latina/" class="social_network"><span><img src="{{ asset('image/landing/instagram.png') }}" alt="Instagram"></span></a>
+                    <a href="https://www.youtube.com/channel/UCXFGlrcrioU0KlMP8sAQmEg" class="social_network"><span><img src="{{ asset('image/landing/youtube.png') }}" alt="YouTube"></span></a>
+                    <span class="grey-text text-lighten-4 right">2012 - 2018 © Школа танцев "LATINA" | Казань ул. Карла Маркса 42а | тел. 239-07-30</span>
+                </div>
+            </div>
+        </footer>
+
+        <!--Начало Модального окна-->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h4 class="modal-title">Записатсья на занятие</h4>
+                <div class="modal_form">
+                    <form action="" id="modal-form">
+                        <div class="modal_form-message"></div>
+                        <div class="row">
+                            <input type="hidden" name="direction_id" class="modal_form-direcion">
+                            <label>
+                                <input name="type" type="radio" value="1" checked/>
+                                <span>Групповые занятие</span>
+                            </label>
+                            <label>
+                                <input name="type" type="radio" value="2" />
+                                <span>Индвидуальные занятие</span>
+                            </label>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input type="text" id="nameModal" name="name">
+                                <label for="nameModal">Имя</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">phone</i>
+                                <input type="text" id="phoneModal" name="phone" class="phone">
+                                <label for="phoneModal">Телефон</label>
+                            </div>
+                            <button type="submit" class="modal_form-button">Записаться</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+        <!--Конец Модального окна-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="{{ asset('js/materialize.js') }}"></script>
+        <script src="{{ asset('js/AnimateForm/animate-form.js') }}"></script>
+        <script src="{{ asset('js/form.js') }}"></script>
     </body>
 </html>
