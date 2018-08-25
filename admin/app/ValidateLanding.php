@@ -29,16 +29,12 @@ class ValidateLanding implements ValidateData
         } elseif (!$this->phone){
             return $this->getMessage(true, 'Заполните телефон');
         } else {
-            preg_match('/[\d]+/', $this->name, $matches);
             if (strlen($this->phone) != 16){
                 return $this->getMessage(true, 'Некорректный телефон');
             }
-            if ($matches[0]){
+            if (preg_match('/[\d]+/', $this->name)){
                 return $this->getMessage(true, 'Имя не должна содержать цифры');
             }
-//            $dbconn = require 'connection.php';
-//            pg_insert($dbconn, 'lid', $_POST);
-//            $message = [$_POST];
 //            $mail = new Mail();
 //            $mail->send('absaruslan9@yandex.ru', 'absaruslan90@gmail.com','Лид с лендинга Latina', $message);
             return $this->getMessage(false, 'Сообщение отправлено');
