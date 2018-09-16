@@ -1,9 +1,13 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons");
 
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Vuetify
+@import "~vuetify/dist/vuetify.min.css";
