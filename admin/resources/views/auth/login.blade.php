@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="app"></div>
+    <div id="app">
+        <router-view></router-view>
+    </div>
     {{--<div class="container">--}}
     {{--<div class="row">--}}
         {{--<div class="col-md-8 col-md-offset-2">--}}
