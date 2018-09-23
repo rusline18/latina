@@ -6,7 +6,7 @@ $(document).ready(function(){
         $(form).submit(function (e) {
             e.preventDefault();
             $.post({
-                url: window.location.origin+'/form.php',
+                url: window.location.origin+'/form-landing',
                 data: $(this).serialize(),
                 beforeSend: function () {
                     $(button).html(`<div class="preloader-wrapper small active">
