@@ -7,12 +7,31 @@
 
 require('./bootstrap');
 import Vue from 'vue';
-import App from './components/AppComponent';
-import Vuetify from 'vuetify'
+import routes from './routes';
+import Auth from './state';
+// import Vuetify from 'vuetify';
+import VueRouter from 'vue-router';
 
-Vue.use(Vuetify);
 
-// window.Vue = require('vue');
+// Vue.use(Vuetify);
+
+
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    routes
+});
+
+router.beforeEach((to, from, next) => {
+   if (to.matched.some(record => record.meta.requiresAuth) && !Auth.loggedIn) {
+       next({
+           path: '/',
+       });
+   } else {
+       next();
+   }
+});
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -20,10 +39,6 @@ Vue.use(Vuetify);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Vue.component('application-component', require('./components/LoginComponent.vue'));
-
 new Vue({
-    el: '#app',
-    template: '<App/>',
-    components: { App }
-});
+    router
+}).$mount('#app');
